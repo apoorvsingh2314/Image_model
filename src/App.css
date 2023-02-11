@@ -1,0 +1,13 @@
+.upload{
+  border: 1px solid black;
+  padding: 8px 33px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: white;
+  font-size: small;
+  background: linear-gradient(180deg, #A026FF 0%, #0D99FF 100%);
+}
+
+#file{
+  display: none;
+}
