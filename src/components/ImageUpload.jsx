@@ -114,7 +114,7 @@ const ImageUpload = () => {
 
                     {showModal[i] && (
                       <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
-                        <div className=" flex flex-col rounded-md text-white/75 bg-slate-900 h-72 w-72 lg:h-96 lg:w-96 lg:rounded-lg">
+                        <div className=" flex flex-col rounded-md text-white/75 bg-slate-900 h-72 w-72 lg:h-96 lg:w-96 lg:rounded-lg border-solid border-2 border-sky-800">
                           <h2 className="text-center">Upload Image</h2>
                           <label htmlFor="file" className=" z-10 h-60 pt-16 text-center lg:h-80 lg:pt-28">
                             <BiImageAdd size={70} style={{margin:"auto" }}/>
