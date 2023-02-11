@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {IoMdAddCircleOutline} from "react-icons/io";
+import {BiImageAdd} from "react-icons/bi"
 
 const IMAGE_TYPES = [
   "Top View", 
@@ -113,18 +114,10 @@ const ImageUpload = () => {
 
                     {showModal[i] && (
                       <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
-                        <div
-                          style={{
-                            backgroundColor: "white",
-                            padding: "20px",
-                            borderRadius: "10px",
-                          }}
-                        >
-                          <h2>Upload Image</h2>
-                          <label
-                            htmlFor="file"
-                            className="bg-slate-900 py-60 p-24"
-                          >
+                        <div className=" flex flex-col rounded-md text-white/75 bg-slate-900 h-72 w-72 lg:h-96 lg:w-96 lg:rounded-lg">
+                          <h2 className="text-center">Upload Image</h2>
+                          <label htmlFor="file" className=" z-10 h-60 pt-16 text-center lg:h-80 lg:pt-28">
+                            <BiImageAdd size={70} style={{margin:"auto" }}/>
                             Drag and Drop or Click here to Add Image
                             <input
                               id="file"
@@ -132,7 +125,12 @@ const ImageUpload = () => {
                               onChange={handleChange(i)}
                             />
                           </label>
-                          <button onClick={handleClose(i)}>Close</button>
+                          <button
+                            className=" block"
+                            onClick={handleClose(i)}
+                          >
+                            Close
+                          </button>
                         </div>
                       </div>
                     )}
@@ -141,7 +139,7 @@ const ImageUpload = () => {
               </div>
 
               <button
-                className=" sm:relative top-2 text-xs font-medium flex text-sky-500"
+                className=" sm:relative top-2 text-xs font-medium flex text-sky-500 z-50"
                 onClick={(e) => {
                   e.preventDefault();
                   setCount((count) => count + 1);
@@ -152,7 +150,7 @@ const ImageUpload = () => {
               </button>
             </div>
             <div className="flex justify-center">
-            <button className="upload mt-7  ">UPLOAD</button>
+              <button className="upload mt-7  ">UPLOAD</button>
             </div>
           </form>
         </div>
